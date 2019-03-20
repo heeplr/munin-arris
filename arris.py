@@ -227,11 +227,12 @@ if __name__ == "__main__":
             # channels
             for c in g['data']:
                 # only use channels with PowerLevel
-                if c['PowerLevel']:
-                    print(
-                        f"channel_{c['ChannelID']}.label {c['ChannelID']} ({c['Frequency']} MHz)\n"
-                        f"channel_{c['ChannelID']}.info Channel type: {c['ChannelType']}, Modulation: {c['Modulation']}"
-                    )
+                if not c['PowerLevel']:
+                    continue
+                print(
+                    f"channel_{c['ChannelID']}.label {c['ChannelID']} ({c['Frequency']} MHz)\n"
+                    f"channel_{c['ChannelID']}.info Channel type: {c['ChannelType']}, Modulation: {c['Modulation']}"
+                )
 
     # output values ?
     else:
@@ -241,5 +242,6 @@ if __name__ == "__main__":
             # channels
             for c in g['data']:
                 # only use channels with PowerLevel
-                if c['PowerLevel']:
-                    print(f"channel_{c['ChannelID']}.value {c[g['key']]}")
+                if not c['PowerLevel']:
+                    continue
+                print(f"channel_{c['ChannelID']}.value {c[g['key']]}")
