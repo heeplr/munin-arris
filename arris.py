@@ -151,13 +151,11 @@ def docsis_status(session):
 
 
 # -----------------------------------------------------------------------------
-# get config
-url = os.getenv("url")
-username = os.getenv("username")
-password = os.getenv("password")
-
-
 if __name__ == "__main__":
+    # get config
+    url = os.getenv("url")
+    username = os.getenv("username")
+    password = os.getenv("password")
     # validate config
     if not url or not username or not password:
         print("Set url, username and password first.", file=sys.stderr)
