@@ -1,7 +1,45 @@
 #!/usr/bin/env python3
 
 """
-MUNIN Plugin to monitor status of Arris TG3442DE cable modem
+# MUNIN Plugin to monitor status of Arris TG3442DE cable modem/router
+#
+# Connect to the web-frontend and get current DOCSIS status.
+#
+# Requirements:
+#   - BeautifulSoup
+#   - pycryptodome
+#
+# Configuration:
+#   [arris]
+#   env.url http://192.168.100.1
+#   env.username admin
+#   env.password yourpassword
+#
+# Parameters:
+#   url      - URL to web-frontend
+#   username - defaults to "admin"
+#   password - valid password
+#
+#
+# Author: Daniel Hiepler <d-munin@coderdu.de>
+#
+# Copyright (c) 2004-2009 Nicolas Stransky.
+# Copyright (c) 2018 Lars Kruse <devel@sumpfralle.de>
+#
+# Permission to use, copy, and modify this software with or without fee
+# is hereby granted, provided that this entire notice is included in
+# all source code copies of any software which is or includes a copy or
+# modification of this software.
+#
+# THIS SOFTWARE IS BEING PROVIDED "AS IS", WITHOUT ANY EXPRESS OR
+# IMPLIED WARRANTY. IN PARTICULAR, NONE OF THE AUTHORS MAKES ANY
+# REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE
+# MERCHANTABILITY OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR
+# PURPOSE.
+#
+#
+# Magic markers
+#  #%# family=contrib
 """
 
 import binascii
