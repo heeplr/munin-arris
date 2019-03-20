@@ -184,7 +184,8 @@ if __name__ == "__main__":
                 f"graph_title {g['title']}\n" \
                 f"graph_category network\n" \
                 f"graph_vlabel {g['vlabel']}\n" \
-                f"graph_info {g['info']}" \
+                f"graph_info {g['info']}\n" \
+                f"graph_scale no\n"
             )
 
             # channels
