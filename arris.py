@@ -5,6 +5,7 @@ MUNIN Plugin to monitor status of Arris TG3442DE cable modem
 """
 
 import binascii
+from bs4 import BeautifulSoup
 from Crypto.Cipher import AES
 import hashlib
 import json
@@ -12,7 +13,6 @@ import re
 import requests
 import sys
 import os
-from bs4 import BeautifulSoup
 
 
 def login(session, url, username, password):
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     graph_descriptions = [
         {
             "name": "up_signal",
-            "title": "Upstream signal strength",
+            "title": "DOCSIS Upstream signal strength",
             "vlabel": "dBmV",
             "info": "DOCSIS upstream signal strength by channel",
             "data": upstream,
@@ -142,7 +142,7 @@ if __name__ == "__main__":
         },
         {
             "name": "up_lock",
-            "title": "Upstream lock",
+            "title": "DOCSIS Upstream lock",
             "vlabel": "locked",
             "info": "DOCSIS upstream channel lock status",
             "data": upstream,
@@ -150,7 +150,7 @@ if __name__ == "__main__":
         },
         {
             "name": "down_signal",
-            "title": "Downstream signal strength",
+            "title": "DOCSIS Downstream signal strength",
             "vlabel": "dBmV",
             "info": "DOCSIS downstream signal strength by channel",
             "data": downstream,
@@ -158,7 +158,7 @@ if __name__ == "__main__":
         },
         {
             "name": "down_lock",
-            "title": "Downstream lock",
+            "title": "DOCSIS Downstream lock",
             "vlabel": "locked",
             "info": "DOCSIS downstream channel lock status",
             "data": downstream,
@@ -166,7 +166,7 @@ if __name__ == "__main__":
         },
         {
             "name": "down_snr",
-            "title": "Downstream signal/noise ratio",
+            "title": "DOCSIS Downstream signal/noise ratio",
             "vlabel": "dB",
             "info": "SNR/MER",
             "data": downstream,
