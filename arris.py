@@ -113,7 +113,6 @@ def login(session, url, username, password):
 
     # prepare headers
     session.headers.update({
-        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0",
         "X-Requested-With": "XMLHttpRequest",
         "csrfNonce": csrf_nonce,
         "Origin": f"{url}/",
