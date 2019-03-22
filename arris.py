@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
 """
-# MUNIN Plugin to monitor status of Arris TG3442DE cable modem/router
+# MUNIN Plugin to monitor status of Arris TG3442 / TG2492LG-85
+# and compatible cable modems
 #
-# Connect to the web-frontend and get current DOCSIS status.
+# Connect to the web-frontend and get current DOCSIS status of upstream and
+# downstream channels. (Signal Power, SNR, Lock Status)
+#
 #
 # Requirements:
 #   - BeautifulSoup
@@ -19,6 +22,10 @@
 #   url      - URL to web-frontend
 #   username - defaults to "admin"
 #   password - valid password
+#
+#
+# References: https://www.arris.com/products/touchstone-tg3442-cable-voice-gateway/
+#
 #
 #
 # Author: Daniel Hiepler <d-munin@coderdu.de>
