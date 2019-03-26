@@ -28,10 +28,7 @@
 #
 #
 #
-# Author: Daniel Hiepler <d-munin@coderdu.de>
-#
-# Copyright (c) 2004-2009 Nicolas Stransky.
-# Copyright (c) 2018 Lars Kruse <devel@sumpfralle.de>
+# Copyright (c) 2019 Daniel Hiepler <d-munin@coderdu.de>
 #
 # Permission to use, copy, and modify this software with or without fee
 # is hereby granted, provided that this entire notice is included in
