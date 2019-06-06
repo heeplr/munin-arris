@@ -230,7 +230,7 @@ if __name__ == "__main__":
     ]
 
     # configure ?
-    if len(sys.argv) > 1 and "config" in sys.argv[1]:
+    if len(sys.argv) > 1 and "config" == sys.argv[1]:
         # process all graphs
         for g in graph_descriptions:
             # graph config
