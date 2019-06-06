@@ -150,6 +150,7 @@ def login(session, url, username, password):
     # set session
     r = session.post(f"{url}/php/ajaxSet_Session.php")
 
+
 def docsis_status(session):
     """get current DOCSIS status page, parse and return channel data"""
     r = session.get(f"{url}/php/status_docsis_data.php")
